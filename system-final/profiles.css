@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 120px 20px 120px;
+    background-color: #03052a;
+    box-shadow: 0 0px 8px #050837;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.logo img{
+    height: auto;
+    width: 130px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    margin-right: 60px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+}
+.navbar a:hover{
+    transition: .2s;
+    transform: scale(.95);
+}
+.dropCon{
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-size: 13px;
+    border: transparent;
+    color: #fff;
+    margin-right: 60px;
+    position: relative;
+}
+.dropCon .drop:hover{
+    transition: .2s;
+    transform: scale(.95);
+}
+.menuCon{
+    background-color: #06083c;
+    border: none;
+}
+.menuCon .item{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.menuCon .item:hover{
+    color: #fff;
+    background-color: #060b58;
+    transition: .2s;
+    transform: scale(.9);
+}
+.login{
+    border: .5px #ffffff49 solid;
+    background-color: #1a1e60;
+    padding: 3px 10px;
+}
+.login a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 0;
+}
+.login:hover{
+    transition: .3s;
+    background-color: #272ea7;
+    border: .5px #fff solid;
+    transform: scale(.9);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/Moskov\ -\ Infernal\ Wyrmlord.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contents{
+    display: flex;
+    gap: 80px;
+    padding: 60px 120px;
+    background: linear-gradient(to left, #03052ad7 30%, #03052a 100%);
+    width: 100%;
+    position: relative;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #53535390;
+    height: 250px;
+    position: sticky;
+    top: 153px;
+    left: 0;
+}
+.nav a{
+    padding: 25px 85px 25px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    font-size: 13px;
+}
+.nav a:hover{
+    transition: .2s;    
+    background: linear-gradient(to left, #080e5cd2 0%, #040632 100%);
+}
+.nav .active{
+    background: linear-gradient(to left, #080e5cd2 0%, #040632 100%);
+}
+.content2{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    min-height: 100vh;
+}
+.myProfile{
+    min-height: 210px;
+    display: flex;
+    color: #fff;
+    gap: 50px;
+    border-bottom: 1px solid #53535390;
+    position: relative;
+}
+.myProfile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 500px;
+}
+.myProfile a:hover{
+    transition: .2s;
+    transform: scale(.98);
+    color: #0011ff;
+}
+.me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+}
+.edit{
+    display: flex;
+    justify-content: space-between;
+}
+.edit a{
+    color: #fff;
+    font-size: 13px;
+    position: relative;
+    top: 0px;
+}
+#profileCon2{
+    color: #be0e0e;
+}
+.profile a{
+    color: #fff;
+    position: absolute;
+    left: 120px;
+    bottom: 50px;
+}
+.edit a:hover{
+    color: #fff;
+    transform: scale(.95);
+    transition: .2s;
+}
+.me p{
+    min-height: 50px;
+    padding-left: 10px;
+    border-left: 1px solid #53535390;
+}
+.me p a{
+    color: #fff;
+    margin-left: 20px;
+}
+.uploads{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.uploads h5{
+    align-self: center;
+    font-family: "Roboto Mono", monospace;
+    color: #959595;
+    font-size: 15px;
+}
+.videoUploads{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.Display h6{
+    color: #fff;
+    font-weight: lighter;
+    width: 225px;
+}
+
+
+
+
+/* update profile */
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 120vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+
+.modal3-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #040737;
+    margin: 15% auto;
+    width: 350px;
+    height: 280px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal3-content h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal3-content p{
+    color: #a20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.profileImg{
+    font-weight: lighter;
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+}
+.close3 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close3:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.submit{
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    margin-top: 30px;
+}
+.submit:hover{
+    transform: scale(.95);
+    transition: .2s;
+    background-color: #070c65;
+}
+
+
+/* update about */
+.modal4 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 120vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+
+.modal4-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #040737;
+    margin: 15% auto;
+    width: 350px;
+    height: 340px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal4-content h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal4-content p{
+    color: #a20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.close4 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close4:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.submit{
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    margin-top: 30px;
+}
+.submit:hover{
+    transform: scale(.95);
+    transition: .2s;
+    background-color: #070c65;
+}
+
+
+
+/* update username */
+.modal5 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 120vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+
+.modal5-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #040737;
+    margin: 15% auto;
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal5-content h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal5-content p{
+    color: #a20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.close5 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.uname{
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+}
+.close5:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.submit{
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    margin-top: 30px;
+}
+.submit:hover{
+    transform: scale(.95);
+    transition: .2s;
+    background-color: #070c65;
+}
+
+
+
+
+/*profile form */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 120vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #040737;
+    margin: 15% auto;
+    width: 350px;
+    height: 380px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal-content h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal-content p{
+    color: #a20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.profileImg{
+    font-weight: lighter;
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.submit{
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    margin-top: 30px;
+}
+.submit:hover{
+    transform: scale(.95);
+    transition: .2s;
+    background-color: #070c65;
+}
+
+
+
+
+
+/* Logout modal */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal2-content{
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #040737;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.modal2-content h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cacaca;
+}
+.modal2-content p{
+    font-size: 16px;
+    color: #dedede;
+}
+.close2 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #dedede;
+    font-size: 20px;
+}
+.close2:hover{
+    color: #d40000;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cancel, .logout{
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.logout{
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a1e60;
+}
+.logout:hover{
+    transition: .2s;
+    transform: scale(.96);
+    color: #fff;
+    background-color: #23277b;
+}
+.cancel:hover{
+    transition: .2s;
+    transform: scale(.96);
+    background-color: #c7c7c7;
+}

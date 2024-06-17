@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 120px 20px 120px;
+    background-color: #03052a;
+    box-shadow: 0 0px 8px #050837;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.logo img{
+    height: auto;
+    width: 130px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    margin-right: 60px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+}
+.navbar a:hover{
+    transition: .2s;
+    transform: scale(.95);
+}
+.dropCon{
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-size: 13px;
+    border: transparent;
+    color: #fff;
+    margin-right: 60px;
+    position: relative;
+}
+.dropCon .active{
+    background: linear-gradient(to left, #0d1697d2 0%, #050946 100%);
+}
+.dropCon .drop:hover{
+    transition: .2s;
+    transform: scale(.95);
+}
+.menuCon{
+    background-color: #06083c;
+    border: none;
+}
+.menuCon .item{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.menuCon .item:hover{
+    color: #fff;
+    background-color: #060b58;
+    transition: .2s;
+    transform: scale(.9);
+}
+.login{
+    border: .5px #ffffff49 solid;
+    background-color: #1a1e60;
+    padding: 3px 10px;
+}
+.login a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 0;
+}
+.login:hover{
+    transition: .3s;
+    background-color: #272ea7;
+    border: .5px #fff solid;
+    transform: scale(.9);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/Moskov\ -\ Infernal\ Wyrmlord.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contents{
+    display: flex;
+    gap: 50px;
+    padding: 60px 120px;
+    background: linear-gradient(to left, #03052ad7 30%, #03052a 100%);
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #53535390;
+    height: 280px;
+    position: sticky;
+    top: 153px;
+    left: 0;
+}
+.nav a{
+    padding: 25px 55px 25px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    font-size: 13px;
+}
+.nav a:hover{
+    transition: .2s;    
+    background: linear-gradient(to left, #080e5cd2 0%, #040632 100%);
+}
+.nav .active{
+    background: linear-gradient(to left, #080e5cd2 0%, #040632 100%);
+}
+.content2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    width: 70vw;
+}
+.videoCon{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 280px;
+}
+.videoCon a video{
+    border-radius: 5px;
+}
+.videoCon a{
+    text-decoration: none;
+}
+.videoCon a:hover{
+    transition: 0.2s;
+    transform: scale(.99);
+    text-decoration: underline;
+    color: #fff;
+}
+.title{
+    color: #fff;
+    font-weight: lighter;
+    margin: 0;
+}
+.uploaderCon{
+    display: flex;
+    gap: 5px;
+    color: #fff;
+    font-weight: lighter;
+}
+.uploaderCon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+.search{
+    position: relative;
+    right: 0;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #2a2a62;
+    transition: background 0.25s;
+}
+.search:focus-within{
+    background: #21214e;
+}
+.input-search{
+    font-size: 13px;
+    color: #fff;
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 250px;
+}
+.input-search::placeholder,
+.icon-search {
+    color: rgb(154, 154, 154);
+}
+
+
+
+
+/* logout */
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.64);
+}
+.modal3-content{
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #040737;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.modal3-content h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cacaca;
+}
+.modal3-content p{
+    font-size: 16px;
+    color: #dedede;
+}
+.close3 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #dedede;
+    font-size: 20px;
+}
+.close3:hover{
+    color: #d40000;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cancel, .logout{
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.logout{
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a1e60;
+}
+.logout:hover{
+    transition: .2s;
+    transform: scale(.96);
+    color: #fff;
+    background-color: #23277b;
+}
+.cancel:hover{
+    transition: .2s;
+    transform: scale(.96);
+    background-color: #c7c7c7;
+}
+
+
+
+
+
+/* login */
+.modal {
+    display: none;
+    z-index: 4;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.656);
+}
+.image img{
+    position: absolute;
+    left: 140px;
+    top: -90px;
+    height: 320px;
+    width: auto;
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    top: -50px;
+    background-color: #050a44;
+    margin: 15% auto;
+    border-radius: 10px;
+    width: 310px;
+    height: auto;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal-content h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal-content .Error{
+    color: #c20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content h3{
+    color: #fff;
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+}
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+form .control{
+    padding: 4px;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #aeaeae;
+}
+.loginBtn{
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid #aeaeae;
+}
+.loginBtn:hover{
+    color: #fff;
+    background-color: #0d17d0;
+    transition: .2s;
+    transform: scale(.9);
+}
+.modal-content p{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 13px;
+}
+.modal-content a{
+    text-decoration: none;
+    color: #c7b300;
+}
+
+
+
+/* signup */
+.modal2{
+    display: none;
+    z-index: 4;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.656);
+}
+.image img{
+    position: absolute;
+    left: 140px;
+    top: -90px;
+    height: 320px;
+    width: auto;
+}
+.modal-content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    top: -50px;
+    background-color: #050a44;
+    margin: 15% auto;
+    border-radius: 10px;
+    width: 310px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+}
+.modal-content2 h3{
+    margin-top: 10px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+.modal-content2 .Error{
+    color: #c20000;
+}
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content2 h3{
+    color: #fff;
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+}
+.modal-content2 form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+form .control2{
+    padding: 4px;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #aeaeae;
+}
+.loginBtn{
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid #aeaeae;
+}
+.loginBtn:hover{
+    color: #fff;
+    background-color: #0d17d0;
+    transition: .2s;
+    transform: scale(.9);
+}
+.modal-content2 p{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 13px;
+}
+.modal-content2 a{
+    text-decoration: none;
+    color: #c7b300;
+}
+
